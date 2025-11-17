@@ -1,3 +1,4 @@
+// Enhanced App.jsx
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -8,7 +9,7 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
 
       <main className="flex-1">
@@ -16,19 +17,19 @@ export default function App() {
           <Hero />
         </section>
 
-        <section id="about" className="py-16">
+        <section id="about" className="py-20 lg:py-28 bg-white">
           <About />
         </section>
 
-        <section id="services" className="py-16 bg-white">
+        <section id="services" className="py-20 lg:py-28 bg-slate-50">
           <Services />
         </section>
 
-        <section id="corporate-info" className="py-16 bg-slate-100">
+        <section id="corporate-info" className="py-20 lg:py-28 bg-white">
           <CorporateInfo />
         </section>
 
-        <section id="contact" className="py-16 bg-white">
+        <section id="contact" className="py-20 lg:py-28 bg-gradient-to-br from-slate-50 to-slate-100">
           <Contact />
         </section>
       </main>

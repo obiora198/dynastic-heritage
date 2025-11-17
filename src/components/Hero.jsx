@@ -1,71 +1,67 @@
+// Enhanced Hero.jsx with animations
 export default function Hero() {
   return (
-    <div className="bg-linear-to-b from-slate-900 via-slate-900 to-slate-800 text-white">
-      <div className="max-w-6xl mx-auto px-4 py-20 lg:py-28 grid gap-10 lg:grid-cols-2 items-center">
-        <div>
-          <p className="text-xs uppercase tracking-[0.25em] text-brand-accent mb-3">
-            CULTURE • HERITAGE • IDENTITY
-          </p>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight mb-4">
-            Preserving Africa’s past,
-            <span className="text-brand-accent"> shaping its legacy</span>.
+    <div className="relative bg-slate-900 text-white overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80")',
+        }}
+      >
+        <div className="absolute inset-0 bg-slate-900/70 backdrop-blur-[1px]"></div>
+      </div>
+      
+      <div className="relative max-w-7xl mx-auto px-6 py-24 lg:py-32 grid gap-12 lg:grid-cols-2 items-center">
+        <div className="space-y-6 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20 opacity-0 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <span className="w-2 h-2 bg-[#C1272D] rounded-full animate-pulse"></span>
+            <span className="text-xs uppercase tracking-widest text-slate-200">
+              TRADING • TELECOM • LOGISTICS
+            </span>
+          </div>
+          
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight opacity-0 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+            Building
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C1272D] to-red-400 block">
+              African Legacy
+            </span>
           </h1>
-          <p className="text-sm sm:text-base text-slate-200 mb-6">
-            Dynastic Heritage Africana Limited is dedicated to documenting,
-            curating, and promoting Africa’s rich cultural and historical
-            heritage through research, exhibitions, education, and strategic
-            partnerships.
+          
+          <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl opacity-0 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+            A diversified Nigerian enterprise delivering excellence in trading, telecommunications, 
+            logistics, and project support services across multiple sectors.
           </p>
 
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center gap-4 pt-4 opacity-0 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
             <a
               href="#corporate-info"
-              className="inline-flex items-center rounded-full bg-brand-accent px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-accent/90 transition"
+              className="inline-flex items-center rounded-lg bg-gradient-to-r from-[#C1272D] to-red-600 px-8 py-4 text-base font-semibold text-white hover:shadow-xl transition-all duration-300 hover:scale-105 shadow-lg"
             >
-              View Corporate Details
+              Corporate Details
+              <span className="ml-2">→</span>
             </a>
             <a
               href="#services"
-              className="inline-flex items-center rounded-full border border-slate-400 px-5 py-2.5 text-sm font-semibold text-slate-100 hover:bg-white hover:text-slate-900 transition"
+              className="inline-flex items-center rounded-lg border-2 border-white/30 bg-white/10 backdrop-blur-sm px-8 py-4 text-base font-semibold text-white hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               Our Services
             </a>
           </div>
-
-          <div className="mt-6 text-xs text-slate-300">
-            Suitable for corporate profiling, due diligence, and KYC checks.
-          </div>
         </div>
 
-        <div className="relative">
-          <div className="rounded-2xl border border-slate-700 bg-slate-900/60 p-5 shadow-xl">
-            <h2 className="text-sm font-semibold text-slate-100 mb-3">
-              At a Glance
-            </h2>
-            <dl className="space-y-2 text-xs sm:text-sm">
-              <div className="flex justify-between">
-                <dt className="text-slate-400">Registered Name</dt>
-                <dd className="font-medium text-slate-100">
-                  Dynastic Heritage Africana Limited
-                </dd>
+        {/* Right Side - Simple visual element */}
+        <div className="relative flex justify-center lg:justify-end">
+          <div className="relative opacity-0 animate-fade-in-right" style={{animationDelay: '0.5s'}}>
+            <div className="w-64 h-64 lg:w-80 lg:h-80 bg-gradient-to-br from-[#14325C]/30 to-[#C1272D]/30 rounded-full backdrop-blur-sm border border-white/10 flex items-center justify-center">
+              <div className="w-48 h-48 lg:w-60 lg:h-60 bg-gradient-to-br from-[#14325C] to-[#C1272D] rounded-full flex items-center justify-center shadow-2xl">
+                <span className="text-white text-5xl lg:text-6xl font-bold">DH</span>
               </div>
-              <div className="flex justify-between">
-                <dt className="text-slate-400">Jurisdiction</dt>
-                <dd className="font-medium text-slate-100">Federal Republic of Nigeria</dd>
-              </div>
-              <div className="flex justify-between">
-                <dt className="text-slate-400">Business Focus</dt>
-                <dd className="font-medium text-slate-100">
-                  Cultural heritage, research & curation
-                </dd>
-              </div>
-              <div className="flex justify-between">
-                <dt className="text-slate-400">Status</dt>
-                <dd className="inline-flex items-center rounded-full bg-emerald-500/10 px-3 py-0.5 text-xs font-semibold text-emerald-300">
-                  Active
-                </dd>
-              </div>
-            </dl>
+            </div>
+            <div className="absolute -bottom-6 -right-6 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 opacity-0 animate-fade-in-up" style={{animationDelay: '1s'}}>
+              <p className="text-slate-200 text-sm">Registered</p>
+              <p className="text-[#C1272D] font-bold">RC 1216895</p>
+            </div>
           </div>
         </div>
       </div>
