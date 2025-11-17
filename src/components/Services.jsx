@@ -1,4 +1,4 @@
-// Enhanced Services.jsx with scroll animations
+// Updated Services.jsx with better images
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const services = [
@@ -30,13 +30,13 @@ const services = [
     title: "Import, Export & General Merchandise",
     desc: "Buying, selling, importing and exporting general goods, raw materials, beverages and finished consumer products.",
     icon: "🌍",
-    image: "https://images.unsplash.com/photo-1565374397055-913de1b59d96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
   },
   {
     title: "Beverages & Building Materials Distribution",
     desc: "Wholesale and retail distribution of beverages and a wide range of building materials across different markets.",
     icon: "🏭",
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
   },
   {
     title: "Telecommunication & ICT Services",
@@ -85,11 +85,11 @@ export default function Services() {
                   alt={service.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute top-4 right-4">
+                {/* <div className="absolute top-4 right-4">
                   <div className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center text-xl shadow-lg">
                     {service.icon}
                   </div>
-                </div>
+                </div> */}
               </div>
               
               {/* Service Content */}
